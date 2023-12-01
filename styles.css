@@ -1,0 +1,123 @@
+html,body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: black;
+    height: 65px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+.logo{
+text-decoration: none;
+font-family: 'Bebas Neue', sans-serif;
+font-size: 50px;
+color: white;
+padding-left: 10px;
+
+}
+button{
+    background:none;
+    height: 42px;
+    width: 42px;
+    margin: 15px;
+    flex-direction: column;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+}
+button span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s linear;
+}
+button.pushed .butt{
+position: absolute;
+top: 50%;
+left: 0;
+transform:translateY(50%);
+}
+button.pushed .butt:nth-child(1){
+    transform: rotate(225deg);
+}
+button.pushed .butt:nth-child(2){
+    transform: rotate(315deg);
+    opacity: 0%;
+}
+button.pushed .butt:nth-child(3){
+    transform: rotate(315deg);
+}
+main{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background: url(vselen.jpg);
+    height: 100%;
+    width: 100%;
+}
+main img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont-menu{
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: black;
+    top: 65px;
+    right: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transform: translateX(100%);
+    transition: 0.5s linear;
+}
+.opened{
+    transform: translateX(0);
+}
+.cont-menu ul a{
+    
+    color: white;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    
+}
+.cont menu ul li a{
+    padding: 10px 16px;
+    display: block;
+}
+.cont-menu ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.cont-menu li a:hover{
+    background-color: peru;
+    color: black;
+    transition: 0.3s linear;
+}
+.cont-menu ul li{
+    width: 100%;
+    list-style: none;
+}
