@@ -61,9 +61,13 @@ main{
     justify-content: center;
     display: flex;
     align-items: center;
-    background: url(vselen.jpg);
+    background: url(tokyo.jpg);
     height: 100%;
     width: 100%;
+}
+main img{
+    width: 1080px;
+    height: 1000px;
 }
 main img{
     width: 100%;
@@ -113,7 +117,7 @@ main img{
     padding: 0;
 }
 .cont-menu li a:hover{
-    background-color: peru;
+    background-color: plum;
     color: black;
     transition: 0.3s linear;
 }
@@ -121,3 +125,4 @@ main img{
     width: 100%;
     list-style: none;
 }
+
