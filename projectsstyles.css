@@ -169,10 +169,24 @@ input{
     height: 40px;
 }
 .pole button{
-    height: 50px;
+    height: 45px;
     width: 70px;
-    background-color: aqua;
+    margin: 0;
+    background-color: blue;
     color: azure;
-    font-weight: 20px;
-    font-size: 20px;
+    font-weight: 15px;
+    font-size: 15px;
+}
+.yes{
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.no{
+    width: 30px;
+    height: 30px;
+    background-color: red;
 }
