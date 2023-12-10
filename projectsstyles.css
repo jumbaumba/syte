@@ -151,12 +151,13 @@ font-size: 20px;
 }
 .task{
 width: 500px;
-height: 50px;
 border: 1px solid  black;
+display: flex;
+justify-content: space-between;
 }
 .pole{
     width: 500px;
-    height: 50px;
+    height: auto;
     border: 1px solid  black;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -180,13 +181,22 @@ input{
 .yes{
     width: 30px;
     height: 30px;
-    background-color: green;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background: url(galochka.png) center center no-repeat #ffff;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
 }
 .no{
     width: 30px;
     height: 30px;
-    background-color: red;
+    background: url(korzina.png) center center no-repeat #ffff;
+    margin: 0;
+    padding-right: 10px;
+    background-size: cover;
+}
+.knopka{
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
 }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    
+    <link rel="stylesheet" href="reg.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body> 
+    <header>
+        <a href="index.html" class="logo">ITStep</a> 
+        <button class="button">
+            <span class="butt"></span>
+            <span class="butt"></span>
+            <span class="butt"></span>
+        </button>
+        <div class = "cont-menu" id="cont-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="projects.html">Проекты</a></li>
+                <li><a href="">Обо мне</a></li>
+                <li><a href="">Контакты</a></li>
+            </ul>
+        </div>
+</header>
+<main>
+    <div class="reg-form">
+        <h2>Форма регистрации</h2>
+        <form action="" method="POST">
+            <div class="form-group">
+                <label>Ф.И.О</label>
+                <input type="text" class="form-control" name="fio" required/>
+            </div>
+            <div class="form-group">
+                <label>дата рождения</label>
+                <input type="date" class="form-control" name="birthday" required/>
+            </div>
+            <div class="form-group">
+                <label>номер телефона</label>
+                <input type="number" class="form-control" name="phonenumber" required/>
+            </div>
+            <div class="form-group">
+                <label>пол</label>
+                <select name="sex" class="form-control" required >
+                <option value="male">мужской</option>
+                <option value="female">женский</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>email</label>
+                <input type="email" class="form-control" name="email" required/>
+            </div>
+            <div class="form-group">
+                <label>ссылка на GitHub</label>
+                <input type="url" class="form-control" name="GitHub" required/>
+            </div>
+            <div class="form-group">
+                <button class="form-control" type="button">Зарегистрировать</button>
+            </div>
+        </form>
+
+    </div>
+    <div class="card-list">
+        <div class="card">
+        <img src="user.png">
+        <div class="card-name">Test Tostov</div>
+        <div class="card-age">Возраст: 20 лет</div>
+        <button class="">Инфо</button>
+        </div>
+    </div>
+</main>
+<script src="reg.js"></script>
+</body>
+</html>
