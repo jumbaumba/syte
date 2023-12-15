@@ -34,10 +34,11 @@
 <main>
     <div class="reg-form">
         <h2>Форма регистрации</h2>
-        <form action="" method="POST">
+        <form action="" method="POST" onsubmit="return sendForm(event)">
             <div class="form-group">
                 <label>Ф.И.О</label>
                 <input type="text" class="form-control" name="fio" required/>
+                <div class="error" id="name-error"></div>
             </div>
             <div class="form-group">
                 <label>дата рождения</label>
@@ -52,6 +53,7 @@
                 <select name="sex" class="form-control" required >
                 <option value="male">мужской</option>
                 <option value="female">женский</option>
+                <option value="bag">Wallmart bag</option>
                 </select>
             </div>
             <div class="form-group">
@@ -59,11 +61,16 @@
                 <input type="email" class="form-control" name="email" required/>
             </div>
             <div class="form-group">
+                <label>Адрес</label>
+                <input type="text" class="form-control" name="address" required/>
+                <div class="error" id="address-error"></div>
+            </div>
+            <div class="form-group">
                 <label>ссылка на GitHub</label>
                 <input type="url" class="form-control" name="GitHub" required/>
             </div>
             <div class="form-group">
-                <button class="form-control" type="button">Зарегистрировать</button>
+                <button class="form-control" type="submit">Зарегистрировать</button>
             </div>
         </form>
 

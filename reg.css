@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 html,body{
     box-sizing: border-box;
     margin: 0;
@@ -24,12 +27,12 @@ button{
     background:none;
     height: 42px;
     width: 42px;
-    margin: 15px;
-    flex-direction: column;
+    align-items: center;
+    
     padding-top: 5px;
     display: flex;
     justify-content: center;
-    gap: 8px;
+    
     cursor: pointer;
     border: none;
     position: relative;
@@ -150,6 +153,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 0.5px solid black;
 }
 .card img{
     width: 80px;
@@ -169,4 +173,12 @@ main{
     padding-right: 5px 15px;
     color: white;
     cursor: pointer;
+}
+.form-group .form-control{
+    height: 80px;
+
+}
+.error{
+    color: red;
+    font-size: 15px;
 }
