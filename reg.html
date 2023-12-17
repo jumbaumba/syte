@@ -75,12 +75,15 @@
         </form>
 
     </div>
-    <div class="card-list">
+    <div class="card-list" draggable="true" ondragstart="startDrag(event)">
         <div class="card">
         <img src="user.png">
         <div class="card-name">Test Tostov</div>
         <div class="card-age">Возраст: 20 лет</div>
         <button class="">Инфо</button>
+        </div>
+        <div class="card-remove" ondragenter="enterDrag(event)" ondragleave="leaveDrag(event)">
+            <img src="korzina.png" alt="" class="trash-can">
         </div>
     </div>
 </main>
