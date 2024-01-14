@@ -34,7 +34,7 @@
 <main>
     <div class="reg-form">
         <h2>Форма регистрации</h2>
-        <form action="" method="POST" onsubmit="return sendForm(event)">
+        <form action="" method="POST" onsubmit="sendForm(event);return false;">
             <div class="form-group">
                 <label>Ф.И.О</label>
                 <input type="text" class="form-control" name="fio" required/>
@@ -82,9 +82,9 @@
         <div class="card-age">Возраст: 20 лет</div>
         <button class="">Инфо</button>
         </div>
-        <div class="card-remove" ondragenter="enterDrag(event)" ondragleave="leaveDrag(event)">
-            <img src="korzina.png" alt="" class="trash-can">
-        </div>
+    </div>
+    <div class="card-remove" ondragenter="enterDrag(event)" ondragleave="leaveDrag(event)">
+        <img src="korzina.png" alt="" class="trash-can">
     </div>
 </main>
 <script src="reg.js"></script>

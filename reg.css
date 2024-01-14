@@ -24,15 +24,15 @@ padding-left: 10px;
 
 }
 button{
-    background:none;
+    background: none;
     height: 42px;
     width: 42px;
-    align-items: center;
-    
+    margin: 15px;
+    flex-direction: column;
     padding-top: 5px;
     display: flex;
     justify-content: center;
-    
+    gap: 8px;
     cursor: pointer;
     border: none;
     position: relative;
@@ -170,9 +170,14 @@ main{
     margin-top: 20px;
     background-color: rgb(60,173,173);
     border: none;
+    height: 30px;
+    width: 50px;
+    border-radius: 5px;
     padding-right: 5px 15px;
     color: white;
     cursor: pointer;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 .form-group .form-control{
     height: 50px;
@@ -196,3 +201,4 @@ main{
 .trash-can .active{
     background-color: gray;
 }
+

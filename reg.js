@@ -1,3 +1,16 @@
+if(window.localStorage.getItem("id")&& window.localStorage.getItem("name") && window.localStorage.getItem("age")){
+    let cardList = document.getElementsByClassName("card-list")[0];
+
+    if(cardList){
+        
+        let newCard = `<div class="card">
+        <img src="user.png">
+        <div class="card-name">${name}</div>
+        <div class="card-age">Возраст: ${age}</div>
+        <button class="">Инфо</button>
+        </div>`;
+    }
+}
 let menuToggler = document.querySelector(".button");
 let nav = document.getElementById("cont-menu");
 
@@ -18,6 +31,7 @@ if(menuToggler){
 }
 
 function sendForm(event){
+    event.preventDefault();
     let error = {};
     let address = event.target[5].value;
     let addressTamplate = /[\w\W\d\D]{10,}/g;
@@ -48,7 +62,7 @@ function sendForm(event){
     nameField.innerHTML = '';
     nameField.previousElementSibling.classList.remove("error");
     }
-
+    
 4688268446826
     let date = event.target[1].value;
     let gender = event.target[2].value;
@@ -64,20 +78,51 @@ function sendForm(event){
         return false;
     }
     else{
-        let card = document.getElementsByClassName("card-list")[0];
+        let cardList = document.getElementsByClassName("card-list")[0];
+        if(cardList){
         let now = new Date();
         let birthday = new Date(date);
         let age = now.getFullYear() - birthday.getFullYear();
     
 
-    card.insertAdjacentHTML("beforeend",
+    let newCard = cardList.insertAdjacentHTML("beforeend",
         `<div class="card">
         <img src="user.png">
         <div class="card-name">${name}</div>
         <div class="card-age">Возраст: ${age}</div>
         <button class="">Инфо</button>
-        </div>`)
+        </div>`);
+
+
+        let cards = document.getElementsByClassName("card");
+        if(cards.length > 0){
+            cardList.insertAdjacentHTML("beforeEnd", newCard);
+        }
+        else{
+            cardList.innerHTML = newCard;
+        }
+        let user = {
+            id: id,
+            name: event.target[0].value,
+            birthday: event.target[1].value,
+            age: now.getFullYear() - birthday.getFullYear(),
+            sex: event.target[2].value,
+            phone: event.target[3].value,
+            email: event.target[4].value,
+            url: event.target[5].value,
+            address: event.target[6].value
+        }
+        let users = [];
+        if(window.localStorage.getItem("users")){
+            users = JSON.parse(window.localStorage.getItem("users"));
+        }
+        users.push(user);
+        window.localStorage.setItem("users", JSON.stringify(users));
     }
+    return false;
+
+
+    
     function startDrag(event){
         event.dataTransfer.setData("text/html", event.target.id);
         event.dataTransfer.effectAllowed = "move"
@@ -91,4 +136,5 @@ function sendForm(event){
         event.target.classList.remove("active");
     }
     return false;
+}
 }
